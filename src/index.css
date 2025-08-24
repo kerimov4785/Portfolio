@@ -1,0 +1,124 @@
+    .panel {
+        height: 100vh;
+        position: fixed;
+        right: 0;
+        background-color: #070707;
+        width: calc(100% - 1050px);
+        transition: .4s;
+        /* border-left: 3px solid #00CFC1; */
+    }
+
+    main {
+        width: 1050px;
+        height: 100vh;
+        background-color: #FFEDCC;
+        transition: .4s;
+    }
+
+    .intro{
+        display: flex;
+        position: relative;
+        align-items: center;
+        height: 270px;
+        width: 100%;
+        background-color: #E82E06;
+        overflow: hidden;
+    }
+    .intro h1 {
+        position: absolute;
+        font: 600 290px 'Bebas Neue';
+        text-wrap: nowrap;
+        margin-top: 33px;
+        transition: .3s linear;
+    }
+
+
+    @media screen and (min-width:1400px) {
+        main {
+            width: 1100px;
+        }
+
+        .panel {
+            width: calc(100% - 1100px);
+
+        }
+    }
+    @media screen and (min-width:1500px) {
+        main {
+            width: 1200px;
+        }
+
+        .panel {
+            width: calc(100% - 1200px);
+
+        }
+    }
+    @media screen and (min-width:1600px) {
+        main {
+            width: 1300px;
+        }
+
+        .panel {
+            width: calc(100% - 1300px);
+
+        }
+    }
+    @media screen and (min-width:1800px) {
+        main {
+            width: 1450px;
+        }
+
+        .panel {
+            width: calc(100% - 1450px);
+
+        }
+    }
+    @media screen and (max-width:1300px) {
+        main {
+            width: 950px;
+        }
+
+        .panel {
+            width: calc(100% - 950px);
+
+        }
+    }
+    @media screen and (max-width:1200px) {
+        main {
+            width: 850px;
+        }
+
+        .panel {
+            width: calc(100% - 850px);
+
+        }
+    }
+    @media screen and (max-width:1100px) {
+        main {
+            width: 750px;
+        }
+
+        .panel {
+            width: calc(100% - 750px);
+
+        }
+    }
+    @media screen and (max-width:1000px) {
+        main {
+            width: 650px;
+        }
+
+        .panel {
+            width: calc(100% - 650px);
+
+        }
+    }
+    @media screen and (max-width:900px) {
+        main {
+            width: 100%;
+        }
+
+        .panel {
+            display: none;
+        }
+    }

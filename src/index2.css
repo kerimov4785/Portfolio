@@ -1,0 +1,43 @@
+.panel {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: clamp(300px, 25vw, 400px);
+    height: 100vh;
+    background: #070707;
+    /* transition: .4s; */
+}
+
+main {
+    background-color: #FFEDCC;
+    margin-right: clamp(300px, 25vw, 400px);
+}
+
+.intro {
+    display: flex;
+    position: relative;
+    align-items: center;
+    height: 270px;
+    width: 100%;
+    background-color: #E82E06;
+    overflow: hidden;
+}
+
+.intro h1 {
+    position: absolute;
+    font: 600 290px 'Bebas Neue';
+    text-wrap: nowrap;
+    margin-top: 33px;
+    transition: .3s linear;
+    color: #140B0B;
+}
+
+@media screen and (max-width:900px) {
+    main {
+        width: 100%;
+    }
+
+    .panel {
+        display: none;
+    }
+}

@@ -9,6 +9,7 @@ function Main() {
             <Panel />
             <main>
                 <Header />
+                <div style={{height:'600px'}} ></div>
             </main>
         </>
     )

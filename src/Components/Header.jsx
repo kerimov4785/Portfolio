@@ -24,7 +24,7 @@ function Header() {
     useEffect(() => {
         gsap.to(introH1.current, {
             x: -introH1.current.offsetWidth / 2 - 20,
-            duration: 15,
+            duration: 22,
             repeat: -1,
             ease: 'linear'
         })

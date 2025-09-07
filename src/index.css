@@ -173,7 +173,7 @@ main {
     }
 
     .intro h1 {
-        transform: scaleY(1.9);
+        transform: scale(1.3,1.9);
         padding-top: 9px;
     }
     #header-line{
@@ -214,5 +214,23 @@ main {
 @media screen and (max-width:1008px){
     .header>div:nth-child(2) h1{
         font-size: 74px;
+    }
+}
+@media screen and (max-width:540px){
+    .intro{
+        height: 200px;
+    }
+    .intro h1{
+        font-size: 208px;
+        margin-top: 20px;
+    }
+    .header>div:nth-child(2) h1{
+        font-size: 60px;
+        line-height: 62px;
+        letter-spacing: -3px;
+        max-width: 300px;
+    }
+    #header-line{
+        gap: 50px;
     }
 }

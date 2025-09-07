@@ -64,7 +64,7 @@ function Header() {
                 <h1>I'm a web developer .</h1>
             </div>
             <div ref={headerLineRef} id='header-line' >
-                <h5>This is not my portfolio, it is a journey that reveals my deep passion for my work, showcases the extent of my creativity, reflecting both who I am as a professional and the unique perspective I bring to every project, with innovation and determination.</h5>
+                <h5>{`This is not my portfolio, it is a journey that reveals my deep passion for my work, showcases the extent of my creativity, reflecting both who I am as a professional  ${windowSize.width > 540 ? 'and the unique perspective I bring to every project, with innovation and determination.' : ''}`}</h5>
                 <h5>where creativity meets results</h5>
             </div>
         </div>

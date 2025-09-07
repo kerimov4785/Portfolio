@@ -216,7 +216,7 @@ main {
         font-size: 74px;
     }
 }
-@media screen and (max-width:540px){
+@media screen and (max-width:620px){
     .intro{
         height: 200px;
     }
@@ -237,7 +237,7 @@ main {
         font-size: 14px;
     }
 }
-@media screen and (max-height:700px){
+@media screen and (max-height:700px) and ( max-width:540px ) {
     .header>div:nth-child(2) h1{
         font-size: 48px;
         line-height: 50px;

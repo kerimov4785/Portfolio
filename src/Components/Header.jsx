@@ -18,9 +18,9 @@ function Header() {
 
     const [aboutHeight, setAboutHeight] = useState({});
     window.onresize = function () {
-        if (window.innerWidth > 768) {
+        // if (window.innerWidth > 768) {
             setWindowSize({ width: window.innerWidth, height: window.innerHeight });
-        }
+        // }
     }
 
     useEffect(() => {
@@ -39,20 +39,20 @@ function Header() {
     }, [])
     useLayoutEffect(() => {
         if (introRef.current && headerLineRef.current) {
-            if (window.innerWidth > 768) {
+            // if (window.innerWidth > 768) {
                 const h =
                     windowSize.height -
                     introRef.current.offsetHeight -
                     headerLineRef.current.offsetHeight;
                 setAboutHeight(h);
-            }
-            else {
-                const h =
-                    window.innerHeight -
-                    introRef.current.offsetHeight -
-                    headerLineRef.current.offsetHeight;
-                setAboutHeight(h);
-            }
+            // }
+            // else {
+            //     const h =
+            //         window.innerHeight -
+            //         introRef.current.offsetHeight -
+            //         headerLineRef.current.offsetHeight;
+            //     setAboutHeight(h);
+            // }
         }
     }, [windowSize])
     return (

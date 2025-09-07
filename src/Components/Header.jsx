@@ -37,11 +37,20 @@ function Header() {
     }, [])
     useLayoutEffect(() => {
         if (introRef.current && headerLineRef.current) {
-            const h =
-                windowSize.height -
-                introRef.current.offsetHeight -
-                headerLineRef.current.offsetHeight;
-            setAboutHeight(h);
+            if (window.innerHeight > 768) {
+                const h =
+                    windowSize.height -
+                    introRef.current.offsetHeight -
+                    headerLineRef.current.offsetHeight;
+                setAboutHeight(h);
+            }
+            else {
+                const h =
+                    window.innerHeight -
+                    introRef.current.offsetHeight -
+                    headerLineRef.current.offsetHeight;
+                setAboutHeight(h);
+            }
         }
     }, [windowSize])
     return (

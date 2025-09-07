@@ -233,6 +233,9 @@ main {
     #header-line{
         gap: 50px;
     }
+    .header-mini-title{
+        font-size: 14px;
+    }
 }
 @media screen and (max-height:700px){
     .header>div:nth-child(2) h1{

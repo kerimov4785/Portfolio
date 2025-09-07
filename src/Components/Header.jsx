@@ -18,7 +18,9 @@ function Header() {
 
     const [aboutHeight, setAboutHeight] = useState({});
     window.onresize = function () {
-        setWindowSize({ width: window.innerWidth, height: window.innerHeight });
+        if (window.innerWidth > 768) {
+            setWindowSize({ width: window.innerWidth, height: window.innerHeight });
+        }
     }
 
     useEffect(() => {

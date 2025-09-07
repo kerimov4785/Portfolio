@@ -36,7 +36,7 @@ function Header() {
         })
     }, [])
     useLayoutEffect(() => {
-        if (introRef.current && headerLineRef.current && windowSize.width > 768 ) {
+        if (introRef.current && headerLineRef.current) {
             const h =
                 windowSize.height -
                 introRef.current.offsetHeight -

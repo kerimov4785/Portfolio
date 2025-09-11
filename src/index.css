@@ -133,7 +133,7 @@ main {
 }
 
 #header-line h5:first-of-type {
-    color: var(--orange);
+    color: #8b1b02;
     transform: scaleY(1.1);
     line-height: 12px;
     max-width: 720px;
@@ -147,6 +147,33 @@ main {
     letter-spacing: 0px;
 }
 
+/* about me */
+
+.about-title-box{
+    padding: 40px;
+    background:var(--orange);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    gap: 30px;
+    justify-content: space-between;
+}
+.about-title-box > div {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+.about-title-box h1 {
+    font: 400 150px 'Anton';
+    transform: scaleY(1.31);
+    line-height: 150px;
+    margin-top: 4px;
+    color:#140B0B;
+}
+.about-title-box img {
+    width: 300px;
+}
 @media screen and (max-width:900px) {
     main {
         width: 100%;
@@ -214,6 +241,7 @@ main {
 @media screen and (max-width:1008px){
     .header>div:nth-child(2) h1{
         font-size: 74px;
+        line-height: 68px;
     }
 }
 @media screen and (max-width:620px){

@@ -12,7 +12,7 @@ function About() {
         let tl = gsap.timeline({
             scrollTrigger: {
                 trigger: aboutRef.current,
-                scrub: 1,
+                scrub: true,
                 markers: true,
                 pin: true,
                 start: "top top",

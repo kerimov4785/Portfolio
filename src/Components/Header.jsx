@@ -40,7 +40,7 @@ function Header() {
 
     }, [])
     useLayoutEffect(() => {
-        if (introRef.current && headerLineRef.current) {
+        // if (introRef.current && headerLineRef.current) {
             // if (window.innerWidth > 768) {
             const h =
                 windowSize.height -
@@ -55,7 +55,7 @@ function Header() {
             //         headerLineRef.current.offsetHeight;
             //     setAboutHeight(h);
             // }
-        }
+        // }
 
     }, [windowSize])
     return (

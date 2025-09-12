@@ -11,7 +11,7 @@ function Main() {
             <main>
                 <Header />
                 <About />
-                <div style={{height:'600px'}} ></div>
+                {/* <div style={{height:'600px'}} ></div> */}
             </main>
         </>
     )

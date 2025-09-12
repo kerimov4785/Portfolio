@@ -133,7 +133,7 @@ main {
 }
 
 #header-line h5:first-of-type {
-    color: #8b1b02;
+    color: #E82E06;
     transform: scaleY(1.1);
     line-height: 12px;
     max-width: 720px;
@@ -170,9 +170,6 @@ main {
     line-height: 150px;
     margin-top: 4px;
     color:#140B0B;
-}
-.about-title-box img {
-    width: 300px;
 }
 @media screen and (max-width:900px) {
     main {

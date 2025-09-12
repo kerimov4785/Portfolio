@@ -16,16 +16,16 @@ function About() {
                 markers: true,
                 pin: true,
                 start: "top top",
-                end: `+2000`
+                end: `${titleRef.current.offsetHeight + 1300}`
             }
         })
         tl.from(headings, {
             opacity: 0,
             stagger: 0.2
         })
-            .to(titleRef.current , {
-                height:430
-            })
+            .to(titleRef.current, {
+                height: 430
+        })
     })
     return (
         <section ref={aboutRef} id='about'>

@@ -307,6 +307,9 @@ main {
         max-width: 600px !important;
         margin-left: 64px;
     }
+    #about-text>div>div{
+        min-width: initial;
+    }
 
 }
 
@@ -323,7 +326,7 @@ main {
     }
 }
 
-@media screen and (max-width:620px) {
+@media screen and (max-width:630px) {
     .intro {
         height: 200px;
     }
@@ -346,6 +349,18 @@ main {
 
     .header-mini-title {
         font-size: 14px;
+    }
+    #about-text h2{
+        font-size: 64px;
+        line-height: 64px;
+        transform: scaleY(1);
+    }
+    #about-text p{
+        margin-left: 50px;
+    }
+    #about-text>div>div{
+        gap: 15px;
+        align-items: start;
     }
 }
 

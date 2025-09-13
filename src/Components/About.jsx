@@ -1,36 +1,37 @@
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import React, { useRef } from 'react'
+import React, { useContext, useRef } from 'react'
 import { useEffect } from 'react'
+import { DataContext } from '../DataContext/Data'
 
 function About() {
     gsap.registerPlugin(ScrollTrigger)
+    let { skills, projects } = useContext(DataContext)
     let aboutRef = useRef(null)
     let titleRef = useRef(null)
     useEffect(() => {
-        // const headings = gsap.utils.toArray(titleRef.current.querySelectorAll('h1'))
-        // let tl = gsap.timeline({
-        //     scrollTrigger: {
-        //         trigger: aboutRef.current,
-        //         scrub: true,
-        //         markers: true,
-        //         pin: true,
-        //         start: "top top",
-        //         end: `${titleRef.current.offsetHeight + 1400}`
-        //     }
-        // })
-        // tl.from(headings, {
-        //     opacity: 0,
-        //     stagger: 0.2
-        // })
-        // tl.to(titleRef.current, {
-        //     height: 440
-        // })
-
+        const headings = gsap.utils.toArray(titleRef.current.querySelectorAll('h1'))
+        let tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: aboutRef.current,
+                scrub: true,
+                markers: true,
+                pin: true,
+                start: "top top",
+                end: `${titleRef.current.offsetHeight + 1400}`
+            }
+        })
+        tl.from(headings, {
+            opacity: 0,
+            stagger: 0.2
+        })
+        tl.to(titleRef.current, {
+            height: 440
+        })
     })
     return (
         <section ref={aboutRef} id='about'>
-            {/* <div ref={titleRef} className='about-title-box'>
+            <div ref={titleRef} className='about-title-box'>
                 <div>
                     <h1>WHO</h1>
                     <h1>ELSE</h1>
@@ -40,7 +41,7 @@ function About() {
                     <h1>NOT</h1>
                     <h1 style={{ color: 'white' }}>ME?</h1>
                 </div>
-            </div> */}
+            </div>
             <div id='about-text'>
                 <div>
                     <div>
@@ -62,6 +63,27 @@ function About() {
                         <h2>Motivation</h2>
                     </div>
                     <p>My motivation comes from myself: I always strive to be better than my past self and challenge myself, while also aiming to inspire others to grow and explore new opportunities.</p>
+                </div>
+                <div>
+                    <div>
+                        <h4>04.</h4>
+                        <h2>Skills</h2>
+                    </div>
+                    <p>I work with
+                        {
+                            skills.map(item => ` ${item.name},`)
+                        }
+                        and continuously explore new technologies to bring projects to life.</p>
+                </div>
+                <div>
+                    <div>
+                        <h4>05.</h4>
+                        <h2>CREATIONS</h2>
+                    </div>
+                    <p>I transform ideas into interactive experiences, blending design, code, and imagination to bring each concept to life. Here are some of the worlds I’ve built so far:
+                        {
+                            projects.slice(0,5).map(item => ` ${item.name},`)
+                        }</p>
                 </div>
             </div>
         </section>

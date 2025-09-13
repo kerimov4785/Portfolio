@@ -221,7 +221,12 @@ main {
     max-width: 240px;
 }
 
-#about-text>div:nth-child(1) {
+#about-text>div:nth-child(5) {
+    padding-right: 100px;
+}
+
+#about-text>div:nth-child(1),
+#about-text>div:nth-child(5) {
     align-self: flex-end;
 }
 
@@ -302,13 +307,19 @@ main {
         align-items: start;
         gap: 20px;
     }
-    #about-text p{
+
+    #about-text p {
         align-self: end;
         max-width: 600px !important;
         margin-left: 64px;
     }
-    #about-text>div>div{
+
+    #about-text>div>div {
         min-width: initial;
+    }
+
+    #about-text>div:nth-child(5) {
+        padding-right: 0;
     }
 
 }
@@ -350,15 +361,18 @@ main {
     .header-mini-title {
         font-size: 14px;
     }
-    #about-text h2{
+
+    #about-text h2 {
         font-size: 64px;
         line-height: 64px;
         transform: scaleY(1);
     }
-    #about-text p{
+
+    #about-text p {
         margin-left: 50px;
     }
-    #about-text>div>div{
+
+    #about-text>div>div {
         gap: 15px;
         align-items: start;
     }

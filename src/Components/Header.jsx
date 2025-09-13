@@ -28,7 +28,7 @@ function Header() {
             repeat: -1,
             ease: 'linear'
         })
-         gsap.to(introH1.current, {
+        gsap.to(introH1.current, {
             duration: 0,
         })
         gsap.to([star1.current, star2.current], {
@@ -41,20 +41,22 @@ function Header() {
     }, [])
     useLayoutEffect(() => {
         // if (introRef.current && headerLineRef.current) {
-            // if (window.innerWidth > 768) {
+        // if (window.innerWidth > 768) {
+        setTimeout(() => {
             const h =
                 windowSize.height -
                 introRef.current.offsetHeight -
                 headerLineRef.current.offsetHeight;
             setAboutHeight(h);
-            // }
-            // else {
-            //     const h =
-            //         window.innerHeight -
-            //         introRef.current.offsetHeight -
-            //         headerLineRef.current.offsetHeight;
-            //     setAboutHeight(h);
-            // }
+        }, 10);
+        // }
+        // else {
+        //     const h =
+        //         window.innerHeight -
+        //         introRef.current.offsetHeight -
+        //         headerLineRef.current.offsetHeight;
+        //     setAboutHeight(h);
+        // }
         // }
 
     }, [windowSize])

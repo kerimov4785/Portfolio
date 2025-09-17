@@ -15,7 +15,6 @@ function Header() {
         height: window.innerHeight,
     });
     const [aboutHeight, setAboutHeight] = useState({});
-
     window.onresize = function () {
         // if (window.innerWidth > 768) {
         setWindowSize({ width: window.innerWidth, height: window.innerHeight });

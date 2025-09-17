@@ -9,8 +9,9 @@ function About() {
     let { skills, projects } = useContext(DataContext)
     let aboutRef = useRef(null)
     let titleRef = useRef(null)
+
     useEffect(() => {
-        const headings = gsap.utils.toArray(titleRef.current.querySelectorAll('h1'))
+        const headings = gsap.utils.toArray(titleRef.current.querySelectorAll('.about-title-box h1'))
         let tl = gsap.timeline({
             scrollTrigger: {
                 trigger: aboutRef.current,
@@ -18,7 +19,9 @@ function About() {
                 markers: true,
                 pin: true,
                 start: "top top",
-                end: `${titleRef.current.offsetHeight + 1400}`
+                anticipatePin: 1,
+                end: `${titleRef.current.offsetHeight + 1100}`,
+                fastScrollEnd: true
             }
         })
         tl.from(headings, {
@@ -82,7 +85,7 @@ function About() {
                     </div>
                     <p>I transform ideas into interactive experiences, blending design, code, and imagination to bring each concept to life. Here are some of the worlds I’ve built so far:
                         {
-                            projects.slice(0,5).map(item => ` ${item.name},`)
+                            projects.slice(0, 5).map(item => ` ${item.name},`)
                         }</p>
                 </div>
             </div>

@@ -63,7 +63,6 @@ function About() {
                     trigger: item.obj.current,
                     start: "top 70%",
                     end:"bottom bottom",
-                    markers:true,
                     toggleActions:"restart none reverse none"
                 }
             })

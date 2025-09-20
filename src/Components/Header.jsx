@@ -16,9 +16,9 @@ function Header() {
     });
     const [aboutHeight, setAboutHeight] = useState({});
     window.onresize = function () {
-        // if (window.innerWidth > 768) {
+        if (window.innerWidth > 768) {
         setWindowSize({ width: window.innerWidth, height: window.innerHeight });
-        // }
+        }
     }
     useEffect(() => {
         gsap.to(introH1.current, {
@@ -39,24 +39,24 @@ function Header() {
 
     }, [])
     useLayoutEffect(() => {
-        // if (introRef.current && headerLineRef.current) {
-        // if (window.innerWidth > 768) {
-        setTimeout(() => {
-            const h =
-                windowSize.height -
-                introRef.current.offsetHeight -
-                headerLineRef.current.offsetHeight;
-            setAboutHeight(h);
-        }, 10);
-        // }
-        // else {
-        //     const h =
-        //         window.innerHeight -
-        //         introRef.current.offsetHeight -
-        //         headerLineRef.current.offsetHeight;
-        //     setAboutHeight(h);
-        // }
-        // }
+        if (introRef.current && headerLineRef.current) {
+            if (window.innerWidth > 768) {
+                setTimeout(() => {
+                    const h =
+                        windowSize.height -
+                        introRef.current.offsetHeight -
+                        headerLineRef.current.offsetHeight;
+                    setAboutHeight(h);
+                }, 10);
+            }
+            else {
+                const h =
+                    window.innerHeight -
+                    introRef.current.offsetHeight -
+                    headerLineRef.current.offsetHeight;
+                setAboutHeight(h);
+            }
+        }
 
     }, [windowSize])
     return (

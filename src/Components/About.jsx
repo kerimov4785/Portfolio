@@ -49,6 +49,7 @@ function About() {
                     pin: true,
                     start: "top top",
                     anticipatePin: 1,
+                    markers:true,
                     end: `${window.innerHeight + 1300}`,
                     fastScrollEnd: true,
                 }

@@ -45,12 +45,12 @@ function About() {
             let tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: '.about-title-box',
-                    scrub: true,
+                    scrub: 1,
                     pin: true,
                     start: "top top",
                     anticipatePin: 1,
-                    markers:true,
-                    end: `${window.innerHeight + 1300}`,
+                    // markers:true,
+                    end: `bottom+=1300 bottom `,
                     fastScrollEnd: true,
                 }
             })

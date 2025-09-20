@@ -41,29 +41,30 @@ function About() {
             { obj: fact5, letters: letters5, title: title5 },
         ]
 
-        let tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: '.about-title-box',
-                scrub: true,
-                // markers: true,
-                pin: true,
-                start: "top top",
-                anticipatePin: 1,
-                end: `${window.innerHeight + 1300}`,
-                fastScrollEnd: true,
-            }
-        })
-        tl.from(headings, {
-            opacity: 0,
-            stagger: 0.2
-        })
+        if (window.innerWidth >= 768) {
+            let tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '.about-title-box',
+                    scrub: true,
+                    pin: true,
+                    start: "top top",
+                    anticipatePin: 1,
+                    end: `${window.innerHeight + 1300}`,
+                    fastScrollEnd: true,
+                }
+            })
+            tl.from(headings, {
+                opacity: 0,
+                stagger: 0.2
+            })
+        }
         aboutArray.forEach(item => {
             let tl2 = gsap.timeline({
                 scrollTrigger: {
                     trigger: item.obj.current,
                     start: "top 70%",
-                    end:"bottom bottom",
-                    toggleActions:"restart none reverse none"
+                    end: "bottom bottom",
+                    toggleActions: "restart none reverse none"
                 }
             })
             tl2.to(item.letters, {
@@ -72,10 +73,10 @@ function About() {
                 stagger: 0.005,
             })
             tl2.from(item.title.current, {
-                x:'-100%',
-                duration:1,
-                ease:'power4.out'
-            },'<')
+                x: '-100%',
+                duration: 1,
+                ease: 'power4.out'
+            }, '<')
         })
     }, [])
     return (

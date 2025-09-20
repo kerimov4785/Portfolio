@@ -358,7 +358,11 @@ main {
         line-height: 68px;
     }
 }
-
+@media screen and (max-width:768px) {
+    .about-title-box{
+        height: min-content;
+    }
+}
 @media screen and (max-width:630px) {
     .intro {
         height: 200px;

@@ -4,7 +4,8 @@ import Header from '../Components/Header'
 import About from '../Components/About'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
-import Skills from '../Components/Skills'
+import SkillsBox from '../Components/SkillsBox'
+import SkillsTitle from '../Components/SkillsTitle'
 
 function Main() {
     return (
@@ -13,8 +14,8 @@ function Main() {
             <main>
                 <Header />
                 <About />
-                <Skills />
-                <div style={{height:'700px'}} ></div>
+                <SkillsTitle />
+                <SkillsBox />
             </main>
         </>
     )

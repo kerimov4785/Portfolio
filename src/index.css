@@ -161,7 +161,8 @@ main {
     will-change: transform;
 }
 
-.about-title-box>div , .skills-title > div {
+.about-title-box>div,
+.skills-title>div {
     display: flex;
     gap: 30px;
     justify-content: space-between;
@@ -169,13 +170,15 @@ main {
     flex-wrap: wrap;
 }
 
-.about-title-box h1 , .skills-title h1{
+.about-title-box h1,
+.skills-title h1 {
     font: 400 180px 'Anton';
     transform: scaleY(1.31);
     line-height: 180px;
     margin-top: 4px;
     color: #140B0B;
 }
+
 .skills-title h1 {
     color: var(--orange);
     /* color: #ffffffcc; */
@@ -249,19 +252,7 @@ main {
 }
 
 /* skills */
-.skills-title{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background:#140B0B;
-    padding: 30px;
-    gap: 30px;
-    will-change: transform;
-    height: 100vh;
-}
-/* .skills-title > div > div {
-    overflow: hidden;
-} */
+
 
 @media screen and (max-width:900px) {
     main {
@@ -318,7 +309,9 @@ main {
 }
 
 @media screen and (max-width:1400px) {
-    .about-title-box h1 , .skills-title h1{
+
+    .about-title-box h1,
+    .skills-title h1 {
         font-size: 150px;
         line-height: 150px;
     }
@@ -365,7 +358,8 @@ main {
         font-size: 84px;
     }
 
-    .about-title-box h1,.skills-title h1 {
+    .about-title-box h1,
+    .skills-title h1 {
         font-size: 130px;
         line-height: 130px;
     }
@@ -377,11 +371,15 @@ main {
         line-height: 68px;
     }
 }
+
 @media screen and (max-width:768px) {
-    .about-title-box,.skills-title{
+
+    .about-title-box,
+    .skills-title {
         height: min-content;
     }
 }
+
 @media screen and (max-width:630px) {
     .intro {
         height: 200px;
@@ -422,7 +420,8 @@ main {
         align-items: start;
     }
 
-    .about-title-box h1,.skills-title h1 {
+    .about-title-box h1,
+    .skills-title h1 {
         font-size: 100px;
         line-height: 100px;
     }
@@ -433,7 +432,9 @@ main {
 }
 
 @media screen and (max-width:430px) {
-    .about-title-box h1, .skills-title h1 {
+
+    .about-title-box h1,
+    .skills-title h1 {
         font-size: 85px;
         line-height: 70px;
     }

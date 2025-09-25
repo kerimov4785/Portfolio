@@ -58,6 +58,7 @@ function About() {
                 opacity: 0,
                 stagger: 0.2
             })
+            triggers.push(tl.scrollTrigger);
         }
         aboutArray.forEach(item => {
             let tl2 = gsap.timeline({
@@ -78,7 +79,12 @@ function About() {
                 duration: 1,
                 ease: 'power4.out'
             }, '<')
+            triggers.push(tl2.scrollTrigger);
         })
+
+        return () => {
+            triggers.forEach(t => t.kill());
+        };
     }, [])
     return (
         <section ref={aboutRef} id='about'>

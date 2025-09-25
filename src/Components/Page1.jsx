@@ -27,7 +27,7 @@ function Page1() {
                 </div>
                 <div className="banner">
                     <h4>
-                        HTML (HyperText Markup Language) is the backbone of the <span>web — the frontier</span> where every site begins. It builds the structure: <span>headings, paragraphs, images, and links.</span> 
+                        HTML (HyperText Markup Language) is the backbone of the <span>web — the frontier</span> where every site begins. It builds the structure: <span>headings, paragraphs, images, and links.</span>
                     </h4>
                 </div>
             </div>

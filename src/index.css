@@ -252,9 +252,19 @@ main {
 }
 
 /* skills */
+.skills-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #140B0B;
+    padding: 30px;
+    gap: 30px;
+    will-change: transform;
+    height: 100vh;
+}
 
 
-@media screen and (max-width:900px) {
+@media screen and (max-width:1024px) {
     main {
         width: 100%;
     }
@@ -264,7 +274,7 @@ main {
     }
 }
 
-@media screen and (min-height:730px) and (min-width:900px) {
+@media screen and (min-height:730px) and (min-width:1024px) {
     .intro {
         height: 370px;
     }
@@ -275,7 +285,7 @@ main {
     }
 }
 
-@media screen and (min-height:900px) and (min-width:900px) {
+@media screen and (min-height:900px) and (min-width:1024px) {
     .intro {
         height: 420px;
     }

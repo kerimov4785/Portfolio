@@ -13,8 +13,8 @@ function Main() {
             <Panel />
             <main>
                 <Header />
-                {/* <About /> */}
-                {/* <SkillsTitle /> */}
+                <About />
+                <SkillsTitle />
                 <SkillsBox />
             </main>
         </>

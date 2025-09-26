@@ -1,6 +1,7 @@
 :root {
     --orange: #E82E06;
-    --blue: #00CFC1
+    --blue: #00CFC1;
+    --darkbrown: #140B0B;
 }
 
 .panel {
@@ -16,12 +17,8 @@
 main {
     background-color: #FFEDCC;
     margin-right: clamp(300px, 25vw, 400px);
-    /* margin-right: 350px; */
 }
 
-/* .header {
-    height: 100vh;
-} */
 
 .intro {
     display: flex;
@@ -120,7 +117,7 @@ main {
 #header-line {
     background-color: #140B0B;
     display: flex;
-    padding: 13px;
+    padding: 14px;
     justify-content: space-between;
     align-items: center;
     gap: 100px;
@@ -296,7 +293,7 @@ main {
     }
 
     #header-line {
-        padding: 20px 13px;
+        padding: 20px 14px;
     }
 
     #header-line h5:first-of-type {
@@ -436,8 +433,8 @@ main {
         line-height: 100px;
     }
 
-    .about-title-box {
-        padding: 30px 20px;
+    .about-title-box ,.skills-title{
+        padding: 30px 14px;
     }
 }
 

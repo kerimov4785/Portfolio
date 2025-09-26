@@ -3,23 +3,20 @@ import React, { useLayoutEffect, useState } from 'react'
 import { useRef } from 'react'
 import { useEffect } from 'react'
 
-function Header() {
+function Header({windowSize,setWindowSize}) {
     let introRef = useRef(null);
     let introH1 = useRef(null)
     let headerAboutRef = useRef(null)
     let headerLineRef = useRef(null)
     let star1 = useRef(null)
     let star2 = useRef(null)
-    const [windowSize, setWindowSize] = useState({
-        width: window.innerWidth,
-        height: window.innerHeight,
-    });
+
     const [aboutHeight, setAboutHeight] = useState({});
-    window.onresize = function () {
-        // if (window.innerWidth > 768) {
-        setWindowSize({ width: window.innerWidth, height: window.innerHeight });
-        // }
-    }
+    // window.onresize = function () {
+    //     // if (window.innerWidth > 768) {
+    //     setWindowSize({ width: window.innerWidth, height: window.innerHeight });
+    //     // }
+    // }
     useEffect(() => {
         gsap.to(introH1.current, {
             x: -introH1.current.offsetWidth / 2 - 20,

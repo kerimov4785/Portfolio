@@ -41,7 +41,7 @@ function About() {
             { obj: fact5, letters: letters5, title: title5 },
         ]
 
-        if (window.innerWidth >= 768) {
+        if (window.innerWidth > 768) {
             let tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: '.about-title-box',

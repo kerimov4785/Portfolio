@@ -2,6 +2,7 @@
     --orange: #E82E06;
     --blue: #00CFC1;
     --darkbrown: #140B0B;
+    --white:#FFEDCC
 }
 
 .panel {
@@ -15,6 +16,7 @@
 }
 
 main {
+    overflow: hidden;
     background-color: #FFEDCC;
     margin-right: clamp(300px, 25vw, 400px);
 }

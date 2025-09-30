@@ -24,9 +24,6 @@ function Header({windowSize,setWindowSize}) {
             repeat: -1,
             ease: 'linear'
         })
-        gsap.to(introH1.current, {
-            duration: 0,
-        })
         gsap.to([star1.current, star2.current], {
             rotation: 360,
             duration: 2,

@@ -5,7 +5,7 @@ function Page3() {
     let lineH3 = useRef(null)
     useEffect(() => {
         gsap.to(lineH3.current, {
-            x: -lineH3.current.offsetWidth / 2 - 75,
+            x: -lineH3.current.offsetWidth / 3 - 50,
             duration: 10,
             repeat: -1,
             ease: 'linear'
@@ -31,6 +31,7 @@ function Page3() {
             </div>
             <div>
                 <div ref={lineH3} >
+                    <h3><span>Breaking News </span><span className='star' ></span> Ditching Bootstrap, embracing pure CSS!</h3>
                     <h3><span>Breaking News </span><span className='star' ></span> Ditching Bootstrap, embracing pure CSS!</h3>
                     <h3><span>Breaking News </span><span className='star' ></span> Ditching Bootstrap, embracing pure CSS!</h3>
                 </div>

@@ -294,7 +294,8 @@
     margin-left: -10px;
 }
 
-.page3 .stars div , .star {
+.page3 .stars div,
+.star {
     background-color: var(--orange);
     display: inline-block;
     width: 35px;
@@ -327,7 +328,7 @@
 
 .skill-box5 p {
     width: 350px;
-    top: calc(100% + 45px);
+    top: calc(100% + 60px);
 }
 
 .story3 {
@@ -342,19 +343,22 @@
     background-color: var(--darkbrown);
     display: flex;
     align-items: center;
-    div{
+    overflow: hidden;
+
+    div {
         display: flex;
         gap: 150px;
     }
 }
 
-.page3>div:nth-child(3) h3{
+.page3>div:nth-child(3) h3 {
     font: 400 52px 'Bebas Neue';
     /* transform: scaleY(1); */
     text-transform: uppercase;
     color: var(--white);
     text-wrap: nowrap;
-    span{
+
+    span {
         color: var(--orange);
     }
 }
@@ -363,26 +367,30 @@
 .page3>div:nth-child(4) {
     display: flex;
     justify-content: space-between;
-    gap: 100px;
+    gap: 25px;
     padding-right: 14px;
 }
 
-.skill-box6{
+.skill-box6 {
     height: min-content;
 }
 
-.skill-box6 h4{
-    width: 250px;
+.skill-box6 h4 {
+    width: 300px;
     top: calc(100% - 20px);
     right: 0;
     text-align: end;
 }
 
 .skill-box6 p {
-    top: calc(100% + 45px);
+    top: calc(100% + 60px);
     width: 330px;
     right: 0;
     text-align: end;
+}
+
+.story4 {
+    max-width: 310px;
 }
 
 @media screen and (max-width:1600px) {
@@ -424,6 +432,16 @@
 
     .skill-box1 h4 {
         width: 200px;
+    }
+
+
+    .skill-box5 p,
+    .skill-box6 p {
+        top: calc(100% + 50px);
+    }
+
+    .skill-box6 h4 {
+        width: 250px;
     }
 
     .page1-column1>div:nth-child(2) {
@@ -491,6 +509,15 @@
 
     .skill-box4 {
         margin: 170px 215px 0 0;
+    }
+
+    .story3 {
+        width: 330px;
+    }
+
+    .skill-box5 p,
+    .skill-box6 p {
+        width: 200px;
     }
 }
 
@@ -582,6 +609,48 @@
     .skill-box4 {
         margin: 210px 215px 0 0;
     }
+
+    .story3,
+    .story4 {
+        max-width: 100%;
+        width: 100%;
+        margin-top: 150px;
+    }
+
+    .story4{
+        text-align: end;
+    }
+
+    .skill-box6 {
+        align-self: end;
+    }
+
+    .page3>div:nth-child(4) {
+        flex-direction: column-reverse;
+
+    }
+
+    .skill-box5 p,
+    .skill-box6 p {
+        width: 330px;
+    }
+
+    .page3 .page-num {
+        right: 14px;
+        position: absolute;
+        width: min-content;
+    }
+
+    .page3>div:nth-child(3){
+        margin: 30px 0;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .skill-box5 h1 , .skill-box6 h1 {
+        font-size: 78px !important;
+        line-height: 92px !important;
+    }
 }
 
 @media screen and (max-width:500px) {
@@ -609,6 +678,7 @@
 
     .page-num div {
         height: 7px;
+        width: 100%;
     }
 
     .skill-box1 p {

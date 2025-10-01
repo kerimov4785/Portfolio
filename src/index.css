@@ -16,7 +16,6 @@
 }
 
 main {
-    overflow: hidden;
     background-color: #FFEDCC;
     margin-right: clamp(300px, 25vw, 400px);
 }

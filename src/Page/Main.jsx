@@ -22,8 +22,8 @@ function Main() {
             <Panel />
             <main>
                 <Header windowSize={windowSize} setWindowSize={setWindowSize} />
-                {/* <About /> */}
-                {/* <SkillsTitle /> */}
+                <About />
+                <SkillsTitle />
                 <SkillsBox />
             </main>
         </>

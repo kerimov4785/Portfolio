@@ -615,7 +615,12 @@
     .story4 {
         max-width: 100%;
         width: 100%;
+    }
+    .story3{
         margin-top: 150px;
+    }
+    .story4{
+        margin-top: 135px;
     }
 
     .story4 {

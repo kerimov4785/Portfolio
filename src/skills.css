@@ -306,6 +306,7 @@
 
 
 .page3>div:nth-child(1) {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -617,7 +618,7 @@
         margin-top: 150px;
     }
 
-    .story4{
+    .story4 {
         text-align: end;
     }
 
@@ -641,15 +642,27 @@
         width: min-content;
     }
 
-    .page3>div:nth-child(3){
+    .page3>div:nth-child(1) {
+        padding-top: 0px;
+    }
+
+    .page3>div:nth-child(3) {
         margin: 30px 0;
     }
 }
 
 @media screen and (max-width:550px) {
-    .skill-box5 h1 , .skill-box6 h1 {
-        font-size: 78px !important;
+
+    .skill-box5 h1,
+    .skill-box6 h1 {
+        font-size: 80px !important;
         line-height: 92px !important;
+    }
+    .page3>div:nth-child(1){
+        margin-top: 50px;
+    }
+    .page3 .page-num{
+        top: -75px;
     }
 }
 

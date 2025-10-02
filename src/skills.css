@@ -285,23 +285,6 @@
 
 /* page3 */
 
-.page3 .stars {
-    display: flex;
-    gap: 10px;
-    margin: 50px 0;
-    justify-content: center;
-    width: min-content;
-    margin-left: -10px;
-}
-
-.page3 .stars div,
-.star {
-    background-color: var(--orange);
-    display: inline-block;
-    width: 35px;
-    height: 35px;
-    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-}
 
 
 
@@ -369,11 +352,12 @@
     display: flex;
     justify-content: space-between;
     gap: 25px;
-    padding-right: 14px;
 }
 
 .skill-box6 {
     height: min-content;
+    margin-right: 14px;
+
 }
 
 .skill-box6 h4 {
@@ -585,20 +569,16 @@
         margin-left: 0;
     }
 
-    .skill-box3 h1:nth-child(2) {
-        margin-left: 170px;
-    }
-
     .skill-box3 h4 {
-        bottom: 0;
-        right: 0;
+        bottom: 5px;
+        left: 100%;
         width: 100px;
         text-align: center;
     }
 
     .skill-box3 p {
         top: calc(100% + 5px);
-        width: 100%;
+        width: 310px;
         left: 0;
     }
 
@@ -616,10 +596,12 @@
         max-width: 100%;
         width: 100%;
     }
-    .story3{
+
+    .story3 {
         margin-top: 150px;
     }
-    .story4{
+
+    .story4 {
         margin-top: 135px;
     }
 
@@ -652,23 +634,22 @@
     }
 
     .page3>div:nth-child(3) {
-        margin: 30px 0;
+        margin: 20px 0;
+        height: 110px;
     }
-    .page-num{
+
+    .page-num {
         display: none !important;
     }
 }
 
 @media screen and (max-width:550px) {
 
-    .skill-box5 h1,
+    /* .skill-box5 h1,
     .skill-box6 h1 {
         font-size: 80px !important;
         line-height: 92px !important;
-    }
-    .page3 .page-num{
-        top: -75px;
-    }
+    } */
 }
 
 @media screen and (max-width:500px) {
@@ -689,16 +670,6 @@
         line-height: 100px;
     }
 
-    .page-num h1 {
-        font-size: 56px;
-        line-height: 56px;
-    }
-
-    .page-num div {
-        height: 7px;
-        width: 100%;
-    }
-
     .skill-box1 p {
         width: calc(100% + 100px);
     }
@@ -716,12 +687,8 @@
         line-height: 110px;
     }
 
-    .skill-box3 h1:nth-child(2) {
-        margin-left: 140px;
-    }
-
     .skill-box3 h4 {
-        bottom: 20px;
+        width: 90px;
     }
 
     .skill-box4 p {

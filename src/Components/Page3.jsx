@@ -41,7 +41,7 @@ function Page3() {
                     Honestly, I’m not the biggest fan of Bootstrap — when it’s overused, websites often look too similar and lack originality. Still, whenever I need to create something quickly, it proves to be a reliable tool that gets the job done.
                 </h2>
                 <div className="skill-box skill-box6">
-                    <h1>BOOTSTRAP</h1>
+                    <h1>{window.innerWidth > 500 ?  'BOOTSTRAP' : 'BSTRAP'}</h1>
                     <p>With Bootstrap, I’ve built strong and responsive layouts, taking advantage of its grid system and components. It allows me to speed up development while maintaining structure and consistency.</p>
                     <h4>The Architect of Ready-Made Designs</h4>
                 </div>

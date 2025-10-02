@@ -29,7 +29,7 @@ function Page1() {
             </div>
             <div className="page1-column2">
                 <div className="page-num">
-                    <h1>1/6</h1>
+                    <h1>1/4</h1>
                     <div></div>
                 </div>
                 <div className="banner">

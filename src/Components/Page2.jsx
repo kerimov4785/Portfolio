@@ -5,7 +5,7 @@ function Page2() {
         <div className='page2' >
             <div>
                 <div className="page-num">
-                    <h1>2/6</h1>
+                    <h1>2/4</h1>
                     <div></div>
                 </div>
                 <h2 className='story' >

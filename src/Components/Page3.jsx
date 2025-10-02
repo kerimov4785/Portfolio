@@ -20,7 +20,7 @@ function Page3() {
                     <h4>The Tailor of Digital Styles</h4>
                 </div>
                 <div className="page-num">
-                    <h1>3/6</h1>
+                    <h1>3/4</h1>
                     <div></div>
                 </div>
             </div>

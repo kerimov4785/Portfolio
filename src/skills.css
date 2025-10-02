@@ -664,7 +664,7 @@
 
     .skill-box4 p {
         left: initial;
-        right: 100%;
+        right: calc(100% + 10px);
         width: 140px;
     }
 }

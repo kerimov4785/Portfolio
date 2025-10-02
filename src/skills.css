@@ -24,6 +24,7 @@
 
 .story {
     padding: 0 14px;
+    text-align: justify;
 }
 
 .page1-column2 .banner {
@@ -87,6 +88,9 @@
     position: absolute;
     font: 400 15px 'Abeezee';
     font-style: italic;
+    text-align: justify;
+    hyphens: auto
+
 }
 
 
@@ -120,7 +124,6 @@
     width: 200px;
     right: 100%;
     bottom: -20px;
-    text-align: end;
 }
 
 .skill-box2 h1 {
@@ -335,6 +338,14 @@
     }
 }
 
+.page3>div:nth-child(3) .star{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color: var(--orange);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
 .page3>div:nth-child(3) h3 {
     font: 400 52px 'Bebas Neue';
     /* transform: scaleY(1); */
@@ -371,7 +382,6 @@
     top: calc(100% + 60px);
     width: 330px;
     right: 0;
-    text-align: end;
 }
 
 .story4 {
@@ -604,11 +614,6 @@
     .story4 {
         margin-top: 135px;
     }
-
-    .story4 {
-        text-align: end;
-    }
-
     .skill-box6 {
         align-self: end;
     }

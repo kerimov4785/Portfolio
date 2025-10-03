@@ -14,14 +14,14 @@ function Page2() {
             </div>
             <div className='mobile-banner'>
                 <h4>
-                    JavaScript is the heartbeat of the web — <span>the force </span>that turns still pages into <span>living experiences.</span> From playful animations to powerful logic, it’s the language that <span>transforms static code into interactive stories.</span>
+                    <span>JavaScript</span> is not only about visuals — it’s about <span>communication</span> between users and data. Through <span>fetch</span> and <span>Axios</span>, I connect front-end interfaces with <span>external APIs</span>, transforming static layouts into <span>data-driven experiences.</span>
                 </h4>
             </div>
             <div className='content' >
                 <div className="page2-column1">
                     <div className="banner">
                         <h4>
-                            JavaScript is the heartbeat of the web — <span>the force </span>that turns still pages into <span>living experiences.</span> From playful animations to powerful logic, it’s the language that <span>transforms static code into interactive stories.</span>
+                            <span>JavaScript</span> is not only about visuals — it’s about <span>communication</span> between users and data. Through <span>fetch</span> and <span>Axios</span>, I connect front-end interfaces with <span>external APIs</span>, transforming static layouts into <span>data-driven experiences.</span>
                         </h4>
                     </div>
                 </div>

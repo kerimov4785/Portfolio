@@ -27,6 +27,7 @@
     text-align: justify;
 }
 
+
 .page1-column2 .banner {
     display: flex;
     align-items: center;
@@ -646,15 +647,6 @@
     .page-num {
         display: none !important;
     }
-}
-
-@media screen and (max-width:550px) {
-
-    /* .skill-box5 h1,
-    .skill-box6 h1 {
-        font-size: 80px !important;
-        line-height: 92px !important;
-    } */
 }
 
 @media screen and (max-width:500px) {

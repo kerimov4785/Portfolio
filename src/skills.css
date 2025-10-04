@@ -350,7 +350,7 @@
     font: 400 52px 'Bebas Neue';
     /* transform: scaleY(1); */
     text-transform: uppercase;
-    color: var(--white);
+    color: white;
     text-wrap: nowrap;
 
     span {
@@ -501,7 +501,7 @@
 }
 
 .page4>div:nth-child(4) h3:nth-child(1) {
-    color: var(--white);
+    color: white;
 }
 
 .page4>div:nth-child(4) h3:nth-child(2) {
@@ -549,9 +549,6 @@
     .mini-banner2 {
         visibility: hidden;
     }
-
-
-
 }
 
 @media screen and (max-width:1400px) {

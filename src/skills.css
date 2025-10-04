@@ -491,7 +491,7 @@
     background-color: var(--darkbrown);
     padding: 35px 25px;
     margin-top: 40px;
-
+    gap: 30px;
     h3 {
         font: 400 48px 'Anton';
         line-height: 50px;
@@ -547,7 +547,11 @@
 
 
     .mini-banner2 {
-        visibility: hidden;
+        display: none;
+    }
+
+    .page4>div:nth-child(3) {
+        justify-content: end;
     }
 }
 
@@ -803,6 +807,52 @@
     .page-num {
         display: none !important;
     }
+
+    .page4 {
+        margin-top: 0;
+    }
+
+    .page4>div:nth-child(2) {
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .page4 .mini-banner {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .page4 .mini-banner>div:nth-child(2) {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width:630px) {
+    .skill-box7 h4 {
+        left: calc(100% - 20px);
+        top: 0;
+    }
+
+    .skill-box7 p {
+        top: 100%;
+        left: 0;
+        transform: initial;
+        width: 300px;
+    }
+
+    .page4>div:nth-child(3) {
+        margin-top: 130px;
+    }
+
+    .skill-box8 p {
+        top: 100%;
+        right: 0;
+    }
+
+    .page4>div:nth-child(4) {
+        margin-top: 160px;
+    }
 }
 
 @media screen and (max-width:500px) {
@@ -814,6 +864,12 @@
         left: initial;
         right: calc(100% + 10px);
         width: 140px;
+    }
+
+    .page4 .mini-banner>div:nth-child(2) div:nth-child(1),
+    .page4 .mini-banner>div:nth-child(2) div:nth-child(2)
+    {
+        display: none;
     }
 }
 
@@ -850,5 +906,17 @@
 
     .skill-box4 {
         margin-top: 230px;
+    }
+
+    .skill-box8 p {
+        top: calc(100% + 10px);
+    }
+
+    .skill-box7 h4 {
+        width: 160px;
+    }
+
+    .skill-box8 h4 {
+        top: 0px;
     }
 }

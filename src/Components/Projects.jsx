@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { DataContext } from '../DataContext/Data'
+import ProjectCard from './ProjectCard'
 
 function Projects() {
     let { projects } = useContext(DataContext)
@@ -22,9 +23,7 @@ function Projects() {
         <section className='projects' >
             {
                 projects.map((item, i) =>
-                    <a style={getColor(item.colorType)} key={i} href={item.url} target='_blank' className='project'>
-                        <h2>{item.name}</h2>
-                    </a>
+                    <ProjectCard  key={i} getColor={getColor} item={item} />
                 )
             }
         </section>

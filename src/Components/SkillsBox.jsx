@@ -10,7 +10,6 @@ function SkillsBox() {
             <Page2 />
             <Page3 />
             <Page4 />
-            <div style={{height:"200px"}} ></div>
         </section>
     )
 }

@@ -1,0 +1,30 @@
+.projects-title {
+    height: 100vh;
+    background-color: var(--orange);
+}
+
+.project {
+    display: flex;
+    height: 170px;
+    justify-content: center;
+    align-items: center;
+}
+
+.project h2 {
+    font: 400 64px 'Erica One';
+    text-transform: uppercase;
+    width: min-content;
+    line-height: 64px;
+    text-align: center;
+}
+
+.projects-title span {
+    color: white;
+}
+
+@media screen and (max-width:768px) {
+    .project h2 {
+        font-size: 46px;
+        line-height: 46px;
+    }
+}

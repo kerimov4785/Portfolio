@@ -6,6 +6,8 @@ import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import SkillsBox from '../Components/SkillsBox'
 import SkillsTitle from '../Components/SkillsTitle'
+import Projects from '../Components/Projects'
+import ProjectsTitle from '../Components/ProjectsTitle'
 
 function Main() {
     const [windowSize, setWindowSize] = useState({
@@ -25,6 +27,9 @@ function Main() {
                 <About />
                 <SkillsTitle />
                 <SkillsBox />
+                <ProjectsTitle />
+                <Projects />
+                <div style={{ height: "200px" }} ></div>
             </main>
         </>
     )

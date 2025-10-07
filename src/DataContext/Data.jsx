@@ -16,17 +16,18 @@ function Data({ children }) {
         { name: 'Python', percent: 70 },
     ]
     let projects = [
-        { name: 'SkyScanner', url: 'https://skyscanner-tau.vercel.app/' },
-        { name: 'Park Cinema', url: 'https://cinema-seven-sandy.vercel.app/' },
-        { name: 'Papa Johns', url: 'https://papa-johns-nine.vercel.app/' },
-        { name: 'Puzzle', url: 'https://puzzle-gamma-sage.vercel.app/' },
-        { name: 'Turbo.az', url: 'https://turbo-brown.vercel.app/' },
-        { name: 'Burger house', url: 'https://burger-sigma-sage.vercel.app/' },
-        { name: 'Home Agency', url: 'https://home-agency.vercel.app/' },
-        { name: 'Passport', url: 'https://passport-ten-theta.vercel.app/' },
-        { name: 'Unwind Hotel', url: 'https://unwind-hotel-two.vercel.app/' },
-        { name: 'Oneder', url: 'https://oneder-chi.vercel.app/' },
-        { name: 'Shapely Demo', url: 'https://shapely-demo-wine.vercel.app/' }
+        { name: 'Shapely Demo', url: 'https://shapely-demo-wine.vercel.app/', colorType: 1 },
+        { name: 'Oneder', url: 'https://oneder-chi.vercel.app/', colorType: 2 },
+        { name: 'Unwind Hotel', url: 'https://unwind-hotel-two.vercel.app/', colorType: 3 },
+        { name: 'Passport', url: 'https://passport-ten-theta.vercel.app/', colorType: 4 },
+        { name: 'Home Agency', url: 'https://home-agency.vercel.app/', colorType: 1 },
+        { name: 'Burger house', url: 'https://burger-sigma-sage.vercel.app/', colorType: 2 },
+        { name: 'Turbo.az', url: 'https://turbo-brown.vercel.app/', colorType: 3 },
+        { name: 'Puzzle', url: 'https://puzzle-gamma-sage.vercel.app/', colorType: 4 },
+        { name: 'Papa Johns', url: 'https://papa-johns-nine.vercel.app/', colorType: 1 },
+        { name: 'Park Cinema', url: 'https://cinema-seven-sandy.vercel.app/', colorType: 2 },
+        { name: 'Country', url: 'https://country-seven-liard.vercel.app/', colorType: 3 },
+        { name: 'SkyScanner', url: 'https://skyscanner-tau.vercel.app/', colorType: 4 },
     ]
     let obj = {
         skills,

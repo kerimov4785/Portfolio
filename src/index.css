@@ -10,7 +10,6 @@
     right: 0;
     top: 0;
     width: clamp(300px, 25vw, 400px);
-    /* width: 350px; */
     height: 100vh;
     background: #070707;
 }
@@ -148,7 +147,7 @@ main {
 
 /* about me */
 
-.about-title-box {
+.about-title-box , .projects-title {
     padding: 30px;
     background: var(--orange);
     display: flex;
@@ -160,7 +159,8 @@ main {
 }
 
 .about-title-box>div,
-.skills-title>div {
+.skills-title>div ,
+.projects-title > div {
     display: flex;
     gap: 30px;
     justify-content: space-between;
@@ -169,7 +169,8 @@ main {
 }
 
 .about-title-box h1,
-.skills-title h1 {
+.skills-title h1 ,
+.projects-title h1 {
     font: 400 180px 'Anton';
     transform: scaleY(1.31);
     line-height: 180px;
@@ -179,7 +180,6 @@ main {
 
 .skills-title h1 {
     color: var(--orange);
-    /* color: #ffffffcc; */
 }
 
 #about-text {
@@ -319,7 +319,8 @@ main {
 @media screen and (max-width:1400px) {
 
     .about-title-box h1,
-    .skills-title h1 {
+    .skills-title h1 ,
+    .projects-title h1 {
         font-size: 150px;
         line-height: 150px;
     }
@@ -367,7 +368,7 @@ main {
     }
 
     .about-title-box h1,
-    .skills-title h1 {
+    .skills-title h1,.projects-title h1 {
         font-size: 130px;
         line-height: 130px;
     }
@@ -383,8 +384,8 @@ main {
 @media screen and (max-width:768px) {
 
     .about-title-box,
-    .skills-title {
-        height: min-content;
+    .skills-title , .projects-title{
+        height: min-content !important;
     }
 }
 
@@ -429,12 +430,12 @@ main {
     }
 
     .about-title-box h1,
-    .skills-title h1 {
+    .skills-title h1 ,.projects-title h1 {
         font-size: 100px;
         line-height: 100px;
     }
 
-    .about-title-box ,.skills-title{
+    .about-title-box ,.skills-title , .projects-title{
         padding: 30px 14px;
     }
 }
@@ -442,7 +443,7 @@ main {
 @media screen and (max-width:430px) {
 
     .about-title-box h1,
-    .skills-title h1 {
+    .skills-title h1 , .projects-title h1 {
         font-size: 85px;
         line-height: 70px;
     }

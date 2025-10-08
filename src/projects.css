@@ -11,7 +11,7 @@
     align-items: center;
     position: relative;
     overflow: hidden;
-    /* cursor: none; */
+    cursor: none;
 }
 
 .project h2 {
@@ -21,6 +21,7 @@
     line-height: 64px;
     text-align: center;
     position: absolute;
+    pointer-events: none;
 }
 
 .projects-title span {
@@ -34,6 +35,8 @@
     top: 55px;
     right: 0;
     transform: translateX(100%);
+    pointer-events: none;
+
 }
 .project .rating div {
     width: 30px;
@@ -48,6 +51,8 @@
     transform: translateX(102%);
     top: 10px;
     padding-inline: 15px;
+    pointer-events: none;
+
 }
 @media screen and (max-width:768px) {
     .project h2 {

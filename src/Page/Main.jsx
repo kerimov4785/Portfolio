@@ -22,7 +22,7 @@ function Main() {
     }
     return (
         <>
-            {/* <Cursor /> */}
+            <Cursor />
             <Panel />
             <main>
                 <Header windowSize={windowSize} setWindowSize={setWindowSize} />
@@ -31,7 +31,6 @@ function Main() {
                 <SkillsBox />
                 <ProjectsTitle />
                 <Projects />
-                <div style={{ height: "200px" }} ></div>
             </main>
         </>
     )

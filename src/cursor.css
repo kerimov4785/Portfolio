@@ -1,0 +1,28 @@
+.custom-cursor {
+    position: fixed;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+}
+
+.projects-cursor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 20px;
+    z-index: 4;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #E82E06;
+    mix-blend-mode: difference;
+}
+
+
+.projects-cursor h4 {
+    font: 400 18px 'Bebas Neue';
+    color: white;
+    line-height: 18px;
+    width: min-content;
+    text-align: center;
+}

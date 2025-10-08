@@ -2,7 +2,30 @@
     --orange: #E82E06;
     --blue: #00CFC1;
     --darkbrown: #140B0B;
-    --white:#FFEDCC
+    --white: #FFEDCC
+}
+.custom-cursor {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 20px;
+    z-index: 4;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #E82E06;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    mix-blend-mode:difference;
+}
+
+.custom-cursor h4 {
+    font: 400 20px 'Bebas Neue';
+    color: white;
+    line-height: 20px;
+    width: min-content;
+    text-align: center;
 }
 
 .panel {
@@ -147,7 +170,8 @@ main {
 
 /* about me */
 
-.about-title-box , .projects-title {
+.about-title-box,
+.projects-title {
     padding: 30px;
     background: var(--orange);
     display: flex;
@@ -159,8 +183,8 @@ main {
 }
 
 .about-title-box>div,
-.skills-title>div ,
-.projects-title > div {
+.skills-title>div,
+.projects-title>div {
     display: flex;
     gap: 30px;
     justify-content: space-between;
@@ -169,7 +193,7 @@ main {
 }
 
 .about-title-box h1,
-.skills-title h1 ,
+.skills-title h1,
 .projects-title h1 {
     font: 400 180px 'Anton';
     transform: scaleY(1.31);
@@ -319,7 +343,7 @@ main {
 @media screen and (max-width:1400px) {
 
     .about-title-box h1,
-    .skills-title h1 ,
+    .skills-title h1,
     .projects-title h1 {
         font-size: 150px;
         line-height: 150px;
@@ -368,7 +392,8 @@ main {
     }
 
     .about-title-box h1,
-    .skills-title h1,.projects-title h1 {
+    .skills-title h1,
+    .projects-title h1 {
         font-size: 130px;
         line-height: 130px;
     }
@@ -384,7 +409,8 @@ main {
 @media screen and (max-width:768px) {
 
     .about-title-box,
-    .skills-title , .projects-title{
+    .skills-title,
+    .projects-title {
         height: min-content !important;
     }
 }
@@ -430,12 +456,15 @@ main {
     }
 
     .about-title-box h1,
-    .skills-title h1 ,.projects-title h1 {
+    .skills-title h1,
+    .projects-title h1 {
         font-size: 100px;
         line-height: 100px;
     }
 
-    .about-title-box ,.skills-title , .projects-title{
+    .about-title-box,
+    .skills-title,
+    .projects-title {
         padding: 30px 14px;
     }
 }
@@ -443,7 +472,8 @@ main {
 @media screen and (max-width:430px) {
 
     .about-title-box h1,
-    .skills-title h1 , .projects-title h1 {
+    .skills-title h1,
+    .projects-title h1 {
         font-size: 85px;
         line-height: 70px;
     }

@@ -8,6 +8,7 @@ import SkillsBox from '../Components/SkillsBox'
 import SkillsTitle from '../Components/SkillsTitle'
 import Projects from '../Components/Projects'
 import ProjectsTitle from '../Components/ProjectsTitle'
+import Cursor from '../Components/Cursor'
 
 function Main() {
     const [windowSize, setWindowSize] = useState({
@@ -21,6 +22,7 @@ function Main() {
     }
     return (
         <>
+            {/* <Cursor /> */}
             <Panel />
             <main>
                 <Header windowSize={windowSize} setWindowSize={setWindowSize} />

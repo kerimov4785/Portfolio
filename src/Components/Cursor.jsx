@@ -2,38 +2,32 @@ import gsap from 'gsap';
 import React, { useEffect, useRef, useState } from 'react'
 
 function Cursor() {
-    // const [position, setPosition] = useState({ x: 0, y: 0 });
-    const [cursorClass, setCursorClass] = useState()
-    const [cursorInner, setCursorInner] = useState()
-
+    const [cursorType, setCursorType] = useState('basic')
     const cursorRef = useRef(null);
-    useEffect(() => {
-        gsap.to(cursorRef.current, {
-            opacity:0.6,
-            duration:.4,
-            ease:'linear',
-            yoyo:true,
-            repeat:-1
-        })
+    const dotRef = useRef(null);
 
+    useEffect(() => {
         const handleMouseMove = (e) => {
+            gsap.to(dotRef.current, {
+                x: e.clientX,
+                y: e.clientY,
+                xPercent: -50,
+                yPercent: -50,
+                duration: 0, // без задержки
+            });
             gsap.to(cursorRef.current, {
                 x: e.clientX,
                 y: e.clientY,
                 xPercent: -50,
                 yPercent: -50,
-                duration: 0.7,
-                ease: "power3.out"
+                duration: 1,
+                ease: "power4.out"
             });
             if (e.target.className == 'project') {
-                setCursorClass('projects-cursor')
-                setCursorInner(
-                    <h4  >Open Project</h4>
-                )
+                setCursorType('projects')
             }
             else {
-                setCursorClass('')
-                setCursorInner()
+                setCursorType('basic')
             }
 
         };
@@ -42,9 +36,12 @@ function Cursor() {
         return () => window.removeEventListener('mousemove', handleMouseMove);
     }, []);
     return (
-        <div ref={cursorRef} className={`custom-cursor ${cursorClass}`}>
-            {cursorInner}
-        </div>
+        <>
+            {cursorType === 'basic' && <div ref={dotRef} className="cursor-dot"></div>}
+            <div ref={cursorRef} className={`custom-cursor ${cursorType}-cursor`}>
+                {cursorType === "projects" && <h4>Open Project</h4>}
+            </div>
+        </>
     )
 }
 

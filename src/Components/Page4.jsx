@@ -45,8 +45,8 @@ function Page4() {
                 </div>
             </div>
             <div>
-                <h3>Extra! Extra! More skills inside</h3>
-                <h3>click to read the full story.</h3>
+                <h3>Extra! Extra! {window.innerWidth > 550 ? 'More skills inside' : 'Extra!'}</h3>
+                <h3>click to {window.innerWidth > 550 ? 'read the full story.' : 'more skills'}</h3>
             </div>
         </div>
     )

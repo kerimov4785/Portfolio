@@ -5,7 +5,9 @@
     --white: #FFEDCC
 }
 
-
+body{
+    cursor: none;
+}
 .panel {
     position: fixed;
     right: 0;
@@ -38,6 +40,10 @@ main {
     margin-top: 35px;
     color: #140B0B;
     transform: scaleY(1.24);
+}
+
+.header * {
+    pointer-events: none;
 }
 
 .header>div:nth-child(2) {

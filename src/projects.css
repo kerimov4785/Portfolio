@@ -6,22 +6,23 @@
 
 .project {
     display: flex;
-    height: 170px;
+    height: 200px;
     justify-content: center;
     align-items: center;
     position: relative;
     overflow: hidden;
     cursor: none;
+
 }
 
 .project h2 {
-    font: 400 64px 'Erica One';
+    font: 400 74px 'Erica One';
     text-transform: uppercase;
     width: min-content;
-    line-height: 64px;
+    line-height: 74px;
     text-align: center;
     position: absolute;
-    pointer-events: none;
+    pointer-events:none;
 }
 
 .projects-title span {
@@ -53,6 +54,15 @@
     padding-inline: 15px;
     pointer-events: none;
 
+}
+@media screen and (max-width:1400px) {
+    .project{
+        height: 170px;
+    }
+    .project h2{
+        font-size: 64px;
+        line-height: 56px;
+    }
 }
 @media screen and (max-width:768px) {
     .project h2 {

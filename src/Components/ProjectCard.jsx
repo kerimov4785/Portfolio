@@ -26,47 +26,50 @@ function ProjectCard({ item }) {
     let ratingRef = useRef(null)
     let detRef = useRef(null)
     function mouseEnter() {
-        gsap.killTweensOf([titleRef.current, ratingRef.current, detRef.current])
-        gsap.to(titleRef.current, {
-            left: 20,
-            x: 0,
-            duration: 2,
-            ease: 'power4.out'
-        })
-        gsap.to(ratingRef.current, {
-            right: 10,
-            x: 0,
-            duration: 1,
-            ease: 'power4.out'
-        })
-        gsap.to(detRef.current, {
-            right: 10,
-            x: 0,
-            duration: 1,
-            ease: 'power4.out'
-        })
-
+        if (window.innerWidth > 768) {
+            gsap.killTweensOf([titleRef.current, ratingRef.current, detRef.current])
+            gsap.to(titleRef.current, {
+                left: 20,
+                x: 0,
+                duration: 2,
+                ease: 'power4.out'
+            })
+            gsap.to(ratingRef.current, {
+                right: 10,
+                x: 0,
+                duration: 1,
+                ease: 'power4.out'
+            })
+            gsap.to(detRef.current, {
+                right: 10,
+                x: 0,
+                duration: 1,
+                ease: 'power4.out'
+            })
+        }
     }
     function mouseLeave() {
-        gsap.killTweensOf([titleRef.current, ratingRef.current, detRef.current])
-        gsap.to(titleRef.current, {
-            left: '50%',
-            x: '-50%',
-            duration: 2,
-            ease: 'power4.out'
-        })
-        gsap.to(ratingRef.current, {
-            right: 0,
-            x: '100%',
-            duration: 2,
-            ease: 'power4.out'
-        })
-        gsap.to(detRef.current, {
-            right: 0,
-            x: '102%',
-            duration: 2,
-            ease: 'power4.out'
-        })
+        if (window.innerWidth > 768) {
+            gsap.killTweensOf([titleRef.current, ratingRef.current, detRef.current])
+            gsap.to(titleRef.current, {
+                left: '50%',
+                x: '-50%',
+                duration: 2,
+                ease: 'power4.out'
+            })
+            gsap.to(ratingRef.current, {
+                right: 0,
+                x: '100%',
+                duration: 2,
+                ease: 'power4.out'
+            })
+            gsap.to(detRef.current, {
+                right: 0,
+                x: '102%',
+                duration: 2,
+                ease: 'power4.out'
+            })
+        }
     }
     return (
         <a style={{ color: color1, backgroundColor: color2 }} onMouseLeave={() => mouseLeave()} onMouseEnter={() => mouseEnter()} href={item.url} target='_blank' className='project'>

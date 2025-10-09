@@ -9,10 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 20px;
     z-index: 4;
-    width: 80px;
-    height: 80px;
     border-radius: 50%;
     background-color: #E82E06;
     mix-blend-mode: difference;
@@ -28,32 +25,44 @@
 }
 
 .basic-cursor {
-    width: 80px;
-    height: 80px;
-    border: 3px solid #E82E06;
+    border: 5px solid #E82E06;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 5;
     mix-blend-mode: difference;
+    width: 100px;
+    height: 100px;
 }
 
 .cursor-dot {
     position: fixed;
-    left: 0;
-    right: 0;
-    width: 5px;
-    height: 5px;
-    background-color: #E82E06;
-    border-radius: 50%;
     mix-blend-mode: difference;
-    z-index: 5;
+    z-index: 6;
     pointer-events: none;
 }
 
+.cursor-dot div {
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%,-50%);
+    width: 22px;
+    height: 4px;
+    background-color: #E82E06;
+}
+.cursor-dot div:nth-child(2){
+    transform: translate(-50%,-50%) rotate(90deg);
+}
+
 @media screen and (max-width:768px) {
-    .custom-cursor , .cursor-dot{
+
+    .custom-cursor,
+    .cursor-dot , .cursor-dot div {
         display: none;
+    }
+    body , .project{
+        cursor: initial;
     }
 }

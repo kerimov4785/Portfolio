@@ -39,6 +39,7 @@ body {
     text-transform: uppercase;
     overflow-wrap: break-word;
     color: #111111;
+    cursor: none;
     /* pointer-events: none; */
 }
 
@@ -48,9 +49,6 @@ body {
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
-    /* pointer-events: none; */
-
-
 }
 
 main {

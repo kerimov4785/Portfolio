@@ -3,18 +3,18 @@
     pointer-events: none;
     top: 0;
     left: 0;
+    z-index: 99;
+
 }
 
 .projects-cursor {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 4;
     border-radius: 50%;
     background-color: #E82E06;
     mix-blend-mode: difference;
 }
-
 
 .projects-cursor h4 {
     font: 400 18px 'Bebas Neue';
@@ -30,7 +30,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 99;
     mix-blend-mode: difference;
     width: 100px;
     height: 100px;
@@ -40,7 +39,6 @@
 
 .panel-cursor {
     background-color: #E82E06;
-    z-index: 99;
     border-radius: 50%;
     mix-blend-mode: difference;
     pointer-events: none;
@@ -50,8 +48,8 @@
 .cursor-dot {
     position: fixed;
     mix-blend-mode: difference;
-    z-index: 6;
     pointer-events: none;
+    z-index: 100;
 }
 
 .cursor-dot div {
@@ -67,6 +65,20 @@
 .cursor-dot div:nth-child(2) {
     transform: translate(-50%, -50%) rotate(90deg);
 }
+
+
+.contact-cursor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #E82E06;
+}
+
+.contact-cursor h4 {
+    font: 400 20px 'Bebas Neue';
+}
+
 
 @media screen and (max-width:768px) {
 

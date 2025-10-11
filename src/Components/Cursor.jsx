@@ -6,6 +6,7 @@ function Cursor() {
     const cursorRef = useRef(null);
     const dotRef = useRef(null);
     const handleMouseMove = (e) => {
+        console.log(e.target.className);
 
         gsap.to(dotRef.current, {
             x: e.clientX,
@@ -25,14 +26,18 @@ function Cursor() {
         setCursorType(prevType => {
             const isProject = e.target.classList.contains('project');
             const isPanel = e.target.classList.contains('panel');
+            const isContact = e.target.classList.contains('contact');
 
             if (isProject && prevType !== 'projects') {
                 gsap.to(cursorRef.current, { width: 75, height: 75, duration: 0.5 });
                 return 'projects';
             } else if (isPanel && prevType !== 'panel') {
-                gsap.to(cursorRef.current, { width: 100, height: 100, duration: 0.5 }); // пример размеров для panel
+                gsap.to(cursorRef.current, { width: 100, height: 100, duration: 0.5 });
                 return 'panel';
-            } else if (!isProject && !isPanel && prevType !== 'basic') {
+            } else if (isContact && prevType !== 'contact') {
+                gsap.to(cursorRef.current, { width: 60, height: 60, duration: 0.5 });
+                return 'contact'
+            } else if (!isProject && !isPanel && !isContact && prevType !== 'basic') {
                 gsap.to(cursorRef.current, { width: 100, height: 100, duration: 0.5 });
                 return 'basic';
             }
@@ -60,6 +65,7 @@ function Cursor() {
             </div>
             <div ref={cursorRef} className={`custom-cursor ${cursorType}-cursor`}>
                 {cursorType === "projects" && <h4>Open Project</h4>}
+                {cursorType === "contact" && <h4>Tap</h4>}
             </div>
         </>
     )

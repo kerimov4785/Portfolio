@@ -19,7 +19,7 @@ function Cursor() {
             xPercent: -50,
             yPercent: -50,
             duration: 1,
-            ease: "power2.out"
+            ease: "power4.out"
         });
         setCursorType(prevType => {
             const isProject = e.target.classList.contains('project');

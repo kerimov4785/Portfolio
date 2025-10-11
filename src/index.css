@@ -5,16 +5,48 @@
     --white: #FFEDCC
 }
 
-body{
+body {
     cursor: none;
 }
+
 .panel {
     position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     right: 0;
     top: 0;
     width: clamp(300px, 25vw, 400px);
     height: 100vh;
     background: #070707;
+    overflow: hidden;
+    border: 10px solid #070707;
+}
+
+.panel p {
+    font: 400 20px 'Alfa Slab One';
+    line-height: 24px;
+    text-transform: uppercase;
+    text-align: justify;
+    text-align-last: justify;
+    color: #1a1a1a;
+}
+
+.panel a {
+    font: 400 20px 'Alfa Slab One';
+    line-height: 20px;
+    text-transform: uppercase;
+    overflow-wrap: break-word;
+    color: #1a1a1a;
+}
+
+.panel>div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
 }
 
 main {

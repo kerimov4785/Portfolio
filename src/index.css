@@ -29,7 +29,8 @@ body {
     text-transform: uppercase;
     text-align: justify;
     text-align-last: justify;
-    color: #1a1a1a;
+    color: #111111;
+    pointer-events: none;
 }
 
 .panel a {
@@ -37,7 +38,8 @@ body {
     line-height: 20px;
     text-transform: uppercase;
     overflow-wrap: break-word;
-    color: #1a1a1a;
+    color: #111111;
+    /* pointer-events: none; */
 }
 
 .panel>div {
@@ -46,6 +48,8 @@ body {
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
+    /* pointer-events: none; */
+
 
 }
 

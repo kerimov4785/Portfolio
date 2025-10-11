@@ -6,6 +6,7 @@ function Cursor() {
     const cursorRef = useRef(null);
     const dotRef = useRef(null);
     const handleMouseMove = (e) => {
+
         gsap.to(dotRef.current, {
             x: e.clientX,
             y: e.clientY,
@@ -23,11 +24,16 @@ function Cursor() {
         });
         setCursorType(prevType => {
             const isProject = e.target.classList.contains('project');
+            const isPanel = e.target.classList.contains('panel');
+
             if (isProject && prevType !== 'projects') {
-                gsap.to(cursorRef.current, { width: 75, height: 75, duration: .5 });
+                gsap.to(cursorRef.current, { width: 75, height: 75, duration: 0.5 });
                 return 'projects';
-            } else if (!isProject && prevType !== 'basic') {
-                gsap.to(cursorRef.current, { width: 100, height: 100, duration: .5 });
+            } else if (isPanel && prevType !== 'panel') {
+                gsap.to(cursorRef.current, { width: 100, height: 100, duration: 0.5 }); // пример размеров для panel
+                return 'panel';
+            } else if (!isProject && !isPanel && prevType !== 'basic') {
+                gsap.to(cursorRef.current, { width: 100, height: 100, duration: 0.5 });
                 return 'basic';
             }
 
@@ -48,7 +54,7 @@ function Cursor() {
     }, []);
     return (
         <>
-            <div ref={dotRef} style={{ display: cursorType === 'basic' ? 'block' : 'none' }} className="cursor-dot">
+            <div ref={dotRef} style={{ display: (cursorType === 'basic' || cursorType === 'panel') ? 'block' : 'none' }} className="cursor-dot">
                 <div></div>
                 <div></div>
             </div>

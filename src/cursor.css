@@ -30,10 +30,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 5;
+    z-index: 99;
     mix-blend-mode: difference;
     width: 100px;
     height: 100px;
+    pointer-events: none;
+
+}
+
+.panel-cursor {
+    background-color: #E82E06;
+    z-index: 99;
+    border-radius: 50%;
+    mix-blend-mode: difference;
+    pointer-events: none;
+
 }
 
 .cursor-dot {
@@ -47,22 +58,26 @@
     position: absolute;
     left: 50%;
     right: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 22px;
     height: 4px;
     background-color: #E82E06;
 }
-.cursor-dot div:nth-child(2){
-    transform: translate(-50%,-50%) rotate(90deg);
+
+.cursor-dot div:nth-child(2) {
+    transform: translate(-50%, -50%) rotate(90deg);
 }
 
 @media screen and (max-width:768px) {
 
     .custom-cursor,
-    .cursor-dot , .cursor-dot div {
+    .cursor-dot,
+    .cursor-dot div {
         display: none;
     }
-    body , .project{
+
+    body,
+    .project {
         cursor: initial;
     }
 }

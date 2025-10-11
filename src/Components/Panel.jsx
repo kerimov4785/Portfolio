@@ -5,13 +5,34 @@ import React, { useEffect, useRef } from 'react'
 function Panel() {
   gsap.registerPlugin(ScrollTrigger)
   let panelRef = useRef(null)
+  let text = 'Send me a message, write me a line, drop a note, or ping me on socials. I check every message. Your idea, your question, your project — it all matters. Don’t hesitate, just reach out. Whether it’s collaboration, feedback, or a simple hello — I’m here'.split(' ')
   useEffect(() => {
+    const headings = gsap.utils.toArray(document.querySelectorAll('.panel span'))
+    const headings2 = gsap.utils.toArray(document.querySelectorAll('.panel a'))
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: panelRef.current,
+        start: "top top",
+        end:'+10000',
+        scrub: true,
+      }
+    })
 
+    tl.to(headings, {
+      color: '#E82E06',
+      stagger: 0.3
+    })
+    tl.to(headings2, {
+      color: '#E82E06',
+      stagger: 0.3
+    })
   }, [])
   return (
     <div ref={panelRef} className='panel' >
       <p>
-        Send me a message, write me a line, drop a note, or ping me on socials. I check every message. Your idea, your question, your project — it all matters. Don’t hesitate, just reach out. Whether it’s collaboration, feedback, or a simple hello — I’m here
+        {
+          text.map((item, i) => <span key={i} >{item} </span>)
+        }
       </p>
       <div>
         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nihatkerimov4785@gmail.com" target='_blank'>email</a>

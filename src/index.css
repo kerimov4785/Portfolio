@@ -5,15 +5,9 @@
     --white: #FFEDCC
 }
 
-/* body {
+body {
     cursor: none;
-    transition: opacity 0.5s ease;
-    opacity: 1;
 }
-
-body.loading {
-    visibility: hidden;
-} */
 
 .panel {
     position: fixed;

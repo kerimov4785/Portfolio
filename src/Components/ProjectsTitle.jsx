@@ -17,7 +17,6 @@ function ProjectsTitle() {
           pin: true,
           start: "top top",
           anticipatePin: 1,
-          // markers:true,
           end: `bottom+=1300 bottom `,
           fastScrollEnd: true,
         }
@@ -27,6 +26,10 @@ function ProjectsTitle() {
         stagger: 0.2
       })
     }
+    return () => {
+      tl.scrollTrigger?.kill();
+      tl.kill();
+    };
   }, [])
   return (
     <div ref={titleRef} className='projects-title'>

@@ -26,6 +26,10 @@ function Panel() {
       color: '#E82E06',
       stagger: 0.3
     })
+
+    return () => {
+      tl.kill()
+    }
   }, [])
   return (
     <div ref={panelRef} className='panel' >

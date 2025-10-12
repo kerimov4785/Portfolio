@@ -26,7 +26,6 @@ function About() {
     let text5 = `I transform ideas into interactive experiences, blending design, code, and imagination to bring each concept to life. Here are some of the worlds I’ve built so far:${projects.slice(0, 5).map(item => ` ${item.name},`).join('')}`.split("")
     useEffect(() => {
         const triggers = [];
-
         const headings = gsap.utils.toArray(document.querySelectorAll('.about-title-box h1'))
         const letters1 = gsap.utils.toArray(document.querySelectorAll('#text1 span'))
         const letters2 = gsap.utils.toArray(document.querySelectorAll('#text2 span'))
@@ -49,9 +48,9 @@ function About() {
                     pin: true,
                     start: "top top",
                     anticipatePin: 1,
-                    // markers:true,
                     end: `bottom+=1300 bottom `,
                     fastScrollEnd: true,
+
                 }
             })
             tl.from(headings, {
@@ -81,7 +80,7 @@ function About() {
             }, '<')
             triggers.push(tl2.scrollTrigger);
         })
-
+        requestAnimationFrame(() => ScrollTrigger.refresh());
         return () => {
             triggers.forEach(t => t.kill());
         };

@@ -3,7 +3,7 @@ import React, { useLayoutEffect, useState } from 'react'
 import { useRef } from 'react'
 import { useEffect } from 'react'
 
-function Header({windowSize,setWindowSize}) {
+function Header({ windowSize }) {
     let introRef = useRef(null);
     let introH1 = useRef(null)
     let headerAboutRef = useRef(null)
@@ -12,44 +12,44 @@ function Header({windowSize,setWindowSize}) {
     let star2 = useRef(null)
 
     const [aboutHeight, setAboutHeight] = useState({});
-    // window.onresize = function () {
-    //     // if (window.innerWidth > 768) {
-    //     setWindowSize({ width: window.innerWidth, height: window.innerHeight });
-    //     // }
-    // }
     useEffect(() => {
-        gsap.to(introH1.current, {
-            x: -introH1.current.offsetWidth / 2 - 20,
-            duration: 22,
-            repeat: -1,
-            ease: 'linear'
-        })
-        gsap.to([star1.current, star2.current], {
-            rotation: 360,
-            duration: 2,
-            repeat: -1,
-            ease: "linear"
-        })
+        const runAnimation = () => {
+            gsap.to(introH1.current, {
+                x: -introH1.current.offsetWidth / 2 - 20,
+                duration: 22,
+                repeat: -1,
+                ease: 'linear'
+            })
+            gsap.to([star1.current, star2.current], {
+                rotation: 360,
+                duration: 2,
+                repeat: -1,
+                ease: "linear"
+            })
+        }
 
+        // Ждём загрузки всех шрифтов
+        document.fonts.ready.then(runAnimation)
+
+        return () => {
+            gsap.killTweensOf(introH1.current);
+            gsap.killTweensOf([star1.current, star2.current]);
+        };
     }, [])
     useLayoutEffect(() => {
-        // if (introRef.current && headerLineRef.current) {
-        //     if (window.innerWidth > 768) {
-        const h =
-            windowSize.height -
-            introRef.current.offsetHeight -
-            headerLineRef.current.offsetHeight;
-        setAboutHeight(h);
-        // }
-        // else {
-        //     const h =
-        //         window.innerHeight -
-        //         introRef.current.offsetHeight -
-        //         headerLineRef.current.offsetHeight;
-        //     setAboutHeight(h);
-        // }
+        const updateHeight = () => {
+            const h =
+                window.innerHeight -
+                introRef.current.offsetHeight -
+                headerLineRef.current.offsetHeight;
+            setAboutHeight(h);
+        };
 
-    }, [windowSize])
+        document.fonts.ready.then(updateHeight);
+
+        window.addEventListener('resize', updateHeight);
+        return () => window.removeEventListener('resize', updateHeight);
+    }, []);
     return (
         <div className='header' >
             <div ref={introRef} className="intro">

@@ -11,8 +11,9 @@ function SkillsTitle() {
 
     useEffect(() => {
         const headings = gsap.utils.toArray(document.querySelectorAll('.skills-title h1'))
+        let tl
         if (window.innerWidth > 768) {
-            let tl = gsap.timeline({
+            tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: title2Ref.current,
                     scrub: 1,
@@ -28,6 +29,10 @@ function SkillsTitle() {
                 stagger: 0.2
             })
         }
+
+        return () => {
+        if (tl) tl.kill(); 
+    }
     }, [])
     return (
         <div ref={title2Ref} className="skills-title">

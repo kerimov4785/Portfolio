@@ -6,14 +6,12 @@ function Cursor() {
     const cursorRef = useRef(null);
     const dotRef = useRef(null);
     const handleMouseMove = (e) => {
-        console.log(e.target.className);
-
         gsap.to(dotRef.current, {
             x: e.clientX,
             y: e.clientY,
             xPercent: -50,
             yPercent: -50,
-            duration: 0, // без задержки
+            duration: 0,
         });
         gsap.to(cursorRef.current, {
             x: e.clientX,
@@ -54,8 +52,11 @@ function Cursor() {
         })
 
         window.addEventListener('mousemove', handleMouseMove);
-
-        return () => window.removeEventListener('mousemove', handleMouseMove);
+        return () => {
+            window.removeEventListener('mousemove', handleMouseMove)
+            gsap.killTweensOf(dotRef.current);
+            gsap.killTweensOf(cursorRef.current);
+        }
     }, []);
     return (
         <>

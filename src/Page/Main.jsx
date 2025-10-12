@@ -15,17 +15,26 @@ function Main() {
         width: window.innerWidth,
         height: window.innerHeight,
     });
+    const [isShow , setIsShow] = useState(false)
     window.onresize = function () {
         // if (window.innerWidth > 768) {
         setWindowSize({ width: window.innerWidth, height: window.innerHeight });
         // }
     }
+    useEffect(() => {
+        document.fonts.ready.then(() => {
+            setTimeout(() => {
+                ScrollTrigger.refresh();
+            }, 100);
+        });
+    }, []);
+
     return (
         <>
             <Cursor />
             <Panel />
             <main>
-                <Header windowSize={windowSize} setWindowSize={setWindowSize} />
+                <Header windowSize={windowSize} />
                 <About />
                 <SkillsTitle />
                 <SkillsBox />

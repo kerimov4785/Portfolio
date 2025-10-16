@@ -30,5 +30,9 @@ export default defineConfig({
         ]
       }
     })
-  ]
+  ],
+  server: {
+    host: true,  // позволяет подключаться по локальному IP
+    port: 5173    // стандартный порт Vite, можно поменять
+  }
 })

@@ -7,6 +7,7 @@
 
 body {
     cursor: none;
+    background-color: var(--white);
 }
 
 .panel {
@@ -16,6 +17,7 @@ body {
     justify-content: space-between;
     right: 0;
     top: 0;
+    z-index: 97;
     width: clamp(300px, 25vw, 400px);
     height: 100vh;
     background: #070707;
@@ -95,6 +97,11 @@ main {
     width: 150px;
     left: 14px;
     line-height: 15px;
+    overflow: hidden;
+
+    span{
+        display: inline-block;
+    }
 }
 
 .header>div:nth-child(2) p:first-child {
@@ -112,6 +119,10 @@ main {
     line-height: 76px;
     letter-spacing: -6px;
     transform: scale(1, 1);
+    overflow: hidden;
+    span{
+        display: inline-block;
+    }
 }
 
 .header>div:nth-child(2) h1:first-of-type {

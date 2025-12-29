@@ -1,0 +1,152 @@
+:root {
+    --orange: #E82E06;
+    --blue: #00CFC1;
+    --darkbrown: #140B0B;
+    --white: #FFEDCC
+}
+
+.intro-anim h3,
+.intro-anim h4,
+#anim-box-1,
+#anim-box-3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.intro-anim {
+    position: absolute;
+    right: 0;
+    z-index: 102;
+    top: 0;
+    width: 100%;
+    /* cursor: pointer !important; */
+    height: 100vh;
+    background-color: var(--darkbrown);
+}
+
+.intro-anim h3 {
+    font: 400 176px 'Bebas Neue';
+    color: var(--white);
+}
+
+.intro-anim h4 {
+    font: 600 110px 'Righteous';
+    color: var(--orange);
+    z-index: 3;
+}
+
+#anim-box-1 {
+    flex-direction: column;
+}
+
+#anim-box-1 h3 {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: initial;
+    line-height: 150px;
+    color: var(--darkbrown);
+}
+
+.intro-anim h2 {
+    font: 500 200px 'Bebas Neue';
+    color: var(--orange);
+    width: max-content;
+    line-height: 140px;
+    opacity: 0;
+}
+
+#anim-box-2 {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+#anim-box-2 div {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+}
+
+/* Righteous */
+#anim-box-2 h5 {
+    font: 400 100px 'Anton';
+    line-height: 100px;
+    color: var(--white);
+}
+
+#anim-box-3 {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-width: 1350px;
+}
+
+#anim-box-3 div {
+    display: flex;
+    overflow: hidden;
+    width: max-content;
+}
+
+
+#anim-box-3 div:first-of-type {
+    transform: translateX(-300px);
+}
+
+#anim-box-3 div:nth-of-type(2) {
+    transform: translateX(-5%);
+}
+
+
+#anim-box-3 div:last-of-type {
+    transform: translateX(-770px);
+}
+
+
+#anim-box-3 h1 {
+    font: 400 150px 'Righteous';
+    line-height: 140px;
+    color: var(--darkbrown);
+    -webkit-text-stroke: 1px var(--white);
+}
+
+/* .light{
+    color: var(--white) !important;
+} */
+
+@media screen and (max-width:1400px) {
+    .intro-anim h3 {
+        font-size: 152px;
+    }
+    #anim-box-1 h3 {
+        line-height: 120px;
+    }
+
+    #anim-box-2 h5 {
+        font-size: 80px;
+        line-height: 90px;
+    }
+
+    #anim-box-3 {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        max-width: 1100px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    #anim-box-3 {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        max-width: 1000px;
+    }
+}

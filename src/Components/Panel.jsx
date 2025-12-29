@@ -27,6 +27,13 @@ function Panel() {
       stagger: 0.3
     })
 
+    gsap.from(panelRef.current, {
+      x: '100%',
+      duration: 1.3,
+      ease: 'power3.out',
+      delay:.7
+    })
+
     return () => {
       tl.kill()
     }

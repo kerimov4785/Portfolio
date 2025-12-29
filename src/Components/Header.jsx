@@ -77,8 +77,8 @@ function Header({ windowSize }) {
 
         document.fonts.ready.then(updateHeight);
 
-        window.addEventListener('resize', updateHeight);
-        return () => window.removeEventListener('resize', updateHeight);
+        // window.addEventListener('resize', updateHeight);
+        // return () => window.removeEventListener('resize', updateHeight);
     }, []);
     return (
         <div className='header' >
